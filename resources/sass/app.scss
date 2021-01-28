@@ -1,14 +1,37 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    th {
+        position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #fff;
+    }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    span.ok {}
+    span.fail {
+        color: red;
+
+    }
 }
