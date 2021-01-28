@@ -43,10 +43,10 @@ class Domains extends Migration
         });
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('ssl');
-            $table->boolean('ip_correct');
-            $table->boolean('ssl_redirect');
-            $table->boolean('google_analytics');
+            $table->boolean('ssl')->default(0);
+            $table->boolean('ip_correct')->default(0);
+            $table->boolean('ssl_redirect')->default(0);
+            $table->boolean('google_analytics')->default(0);
             $table->timestamps();
         });
         Schema::create('sub_domain_test', function (Blueprint $table) {

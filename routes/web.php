@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,12 +13,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group([
-    'middleware' => ['auth'],
-//    'prefix' => 'admin'
-], function () {
-    Route::get('/', 'HomeController@index')->name('home');
-});
 
+Route::get('/', 'GoLiveController@index')->name('home');
+Route::get('/go-live', 'GoLiveController@index')->name('go-live');
 Auth::routes();
 
